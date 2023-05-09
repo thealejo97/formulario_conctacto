@@ -1,0 +1,3 @@
+Django
+mysqlclient
+django-environ==0.4.5

@@ -3,7 +3,12 @@
 
 Aplicación en django desarrollada como prueba técnica
 
-Proceso de instalación:
+## Informacion de la aplicacion:
+
+Aplicacion desarrollada en Django, usando como motor de base de datos MySQL, como controlador de versiones se tiene github: 'https://github.com/thealejo97/formulario_conctacto', usa plugin de ciudades cities_ligth,
+contiene medidas de seguridad separando los datos sensibles en el archivo secrets.json que no se carga a ningun repositorio remoto
+
+## Proceso de instalación:
 
 1. Crear un ambiente de django (O utilizar el ambiente_formulario_contacto)
 2. Instalar los requirements ejecutando 'pip install -r requirements.txt' 

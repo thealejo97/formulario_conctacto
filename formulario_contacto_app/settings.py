@@ -57,7 +57,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'cities_light'
+    'cities_light',
+    'formulario_contacto_app.usuarios'
 ]
 
 MIDDLEWARE = [

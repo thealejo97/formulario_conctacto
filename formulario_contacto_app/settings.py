@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cities_light'
 ]
 
 MIDDLEWARE = [
@@ -155,3 +156,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CITIES_LIGHT_INCLUDE_COUNTRIES = ['CO', 'US', 'MX']
+CITIES_LIGHT_TRANSLATION_LANGUAGES = ['es', 'en']

@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cities_light',
     'formulario_contacto_app.usuarios',
+    'bootstrap_datepicker_plus',
     'bootstrap4'
 
 ]

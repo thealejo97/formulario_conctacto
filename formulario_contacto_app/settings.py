@@ -76,7 +76,7 @@ ROOT_URLCONF = 'formulario_contacto_app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(os.path.dirname(BASE_DIR), "formulario_contacto_app", "formulario_contacto_app", "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

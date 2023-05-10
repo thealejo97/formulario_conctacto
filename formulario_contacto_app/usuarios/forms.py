@@ -5,6 +5,6 @@ class UsuarioForm(forms.ModelForm):
 
     class Meta:
         model = Usuario
-        fields = []
+        fields = '__all__'
 
         widgets = {}

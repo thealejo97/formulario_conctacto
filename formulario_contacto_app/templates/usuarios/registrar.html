@@ -1,14 +1,31 @@
+{% load bootstrap4 %}
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Registro de usuario</title>
+    {% bootstrap_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
 </head>
-<body>
-    <h1>Registro de usuario</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Registrar</button>
-    </form>
+<body class="body_custom">
+<div class="row mx-0">
+    <div class="col-lg-12 col-6">
+        <div class="text-center text-color-white" >
+            <p>FORMULARIO DE CONTACTO</p>
+        </div>
+    </div>
+    <div class="col-lg-12 col-6">
+        <div class="text-center">
+            <h1>Registro de usuario</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Registrar</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% bootstrap_javascript %}
 </body>
 </html>

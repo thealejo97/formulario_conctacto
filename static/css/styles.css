@@ -1,0 +1,10 @@
+.body_custom {
+    background-image: url("https://images8.alphacoders.com/787/787207.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh;
+}
+.text-color-white{
+    color: white;
+}

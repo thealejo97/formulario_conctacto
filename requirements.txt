@@ -2,4 +2,5 @@ Django
 mysqlclient
 django-environ==0.4.5
 django-cities-light
+django-bootstrap4
 djangorestframework==3.11.0

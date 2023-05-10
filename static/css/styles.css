@@ -8,3 +8,19 @@
 .text-color-white{
     color: white;
 }
+.text-color-cian{
+    color: #18ce89;
+}
+.text-size-36{
+    font-size: 36px;
+}
+.text-size-40{
+    font-size: 40px;
+}
+.background-color-white{
+    background-color: white;
+}
+.mx-10{
+    margin-left: 10%;
+    margin-right: 10%;
+}

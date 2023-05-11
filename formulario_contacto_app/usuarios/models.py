@@ -13,8 +13,8 @@ class Usuario(models.Model):
 
     genero = models.CharField(max_length=10, choices=GENEROS, verbose_name='Sexo*')
     fecha_de_nacimiento = models.DateField(verbose_name='Fecha de nacimiento*')
-    nombre = models.CharField(max_length=50, verbose_name="Nombre*", unique=True)
-    apellido = models.CharField(max_length=50, verbose_name="Apellido*", unique=True)
+    nombre = models.CharField(max_length=50, verbose_name="Nombre*")
+    apellido = models.CharField(max_length=50, verbose_name="Apellido*")
     email = models.CharField(verbose_name="Email", max_length=200, blank=True, null=True, validators=[EmailValidator('Correo electrónico inválido')])
 
     pais = models.ForeignKey(Country, on_delete=models.PROTECT, related_name='pais',

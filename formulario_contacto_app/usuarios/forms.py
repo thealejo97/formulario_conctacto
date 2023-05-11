@@ -8,7 +8,19 @@ class UsuarioForm(forms.ModelForm):
 
     class Meta:
         model = Usuario
-        fields = '__all__'
+        fields = [
+            'genero',
+            'fecha_de_nacimiento',
+            'nombre',
+            'apellido',
+            'email',
+            'direccion',
+            'casa_apto',
+            'pais',
+            'region',
+            'ciudad',
+            'descripcion'
+        ]
 
         widgets = {
             'genero': forms.Select(attrs={'placeholder': 'Selecciona tu género'})

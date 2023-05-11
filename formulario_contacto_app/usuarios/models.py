@@ -1,5 +1,6 @@
 from django.db import models
 from cities_light.models import Country, City, Region
+from django.core.validators import EmailValidator
 
 
 class Usuario(models.Model):
@@ -10,20 +11,21 @@ class Usuario(models.Model):
         ("N", "Preferiría no contestar"),
     )
 
-    genero = models.CharField(max_length=10, choices=GENEROS, verbose_name='elige tu sexo*', null=True, blank=False)
-    fecha_de_nacimiento = models.DateField(verbose_name='fecha de nacimiento*', null=True, blank=False)
-    nombre = models.CharField(max_length=50, verbose_name="nombre*", unique=True)
-    apellido = models.CharField(max_length=50, verbose_name="apellido*", unique=True)
+    genero = models.CharField(max_length=10, choices=GENEROS, verbose_name='Sexo*')
+    fecha_de_nacimiento = models.DateField(verbose_name='Fecha de nacimiento*')
+    nombre = models.CharField(max_length=50, verbose_name="Nombre*", unique=True)
+    apellido = models.CharField(max_length=50, verbose_name="Apellido*", unique=True)
+    email = models.CharField(verbose_name="Email", max_length=200, blank=True, null=True, validators=[EmailValidator('Correo electrónico inválido')])
 
     pais = models.ForeignKey(Country, on_delete=models.PROTECT, related_name='pais',
-                             verbose_name="¿En qué país se encuentra?*", default=1)
+                             verbose_name="País*", default=1)
     region = models.ForeignKey(Region, on_delete=models.PROTECT, related_name='region',
-                               verbose_name="¿En qué región se encuentra?*", null=True, blank=False)
+                               verbose_name="Departamento*")
     ciudad = models.ForeignKey(City, on_delete=models.PROTECT, related_name='ciudad',
-                               verbose_name="¿En qué ciudad se encuentra?*", null=True, blank=False)
-    direccion = models.CharField(max_length=100, verbose_name="dirección donde se reúnen frecuentemente", blank=True)
-    casa_apto = models.CharField(max_length=100, verbose_name="dirección donde se reúnen frecuentemente", blank=True)
-    descripcion = models.CharField(max_length=100, verbose_name="dirección donde se reúnen frecuentemente", blank=True)
+                               verbose_name="Ciudad*")
+    direccion = models.CharField(max_length=100, verbose_name="Dirección*")
+    casa_apto = models.CharField(max_length=100, verbose_name="Casa/Apto", blank=True, null=True)
+    descripcion = models.CharField(max_length=100, verbose_name="Descripción", blank=True, null=True)
 
 
     activo = models.BooleanField(verbose_name="¿El tipo se encuentra activo?", default=True)

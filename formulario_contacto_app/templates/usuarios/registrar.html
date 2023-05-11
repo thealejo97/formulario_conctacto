@@ -21,34 +21,44 @@
         </div>
     </div>
     <div class="col-lg-12 col-12">
-        <div class="text-center background-color-white mx-10">
+        <div class="text-center background-color-white mx-10 py-3">
             <div class="text-color-cian py-4">
                 <h1>Contacto</h1>
             </div>
             <div class="row mx-0">
-                <div class="col-6">
-                    <div class="col-12"><p><i class="fas fa-envelope text-color-cian"></i> test@test.com</p></div>
-                    <div class="col-12"><p><i class="fas fa-map-marker-alt text-color-cian"></i> Calle 1 No 1</p></div>
-                    <div class="col-12"><p><i class="fas fa-phone text-color-cian"></i></i> (57) 3156165816</p></div>
-                    <div class="row mx-0">
-                        <div class="col-4"><i class="fa-brands fa-square-facebook text-color-cian text-size-40"></i></div>
-                        <div class="col-4"><i class="fa-brands fa-square-twitter text-color-cian text-size-40"></i></div>
-                        <div class="col-4"><i class="fa-brands fa-square-instagram text-color-cian text-size-40"></i></div>
+                <div class="col-lg-6 col-12 d-flex flex-column justify-content-center">
+                    <div class="col-lg-6 col-12 col-lg-6 col-12 mx-auto">
+                        <div class="col-12"><p><i class="fas fa-envelope text-color-cian"></i> test@test.com</p></div>
+                        <div class="col-12"><p><i class="fas fa-map-marker-alt text-color-cian"></i> Calle 1 No 1</p></div>
+                        <div class="col-12"><p><i class="fas fa-phone text-color-cian"></i></i> (57) 3156165816</p></div>
+                        <div class="row mx-0 justify-content-center align-items-center">
+                            <div class="col-auto"><a href="https://www.facebook.com"><i class="fa-brands fa-square-facebook text-color-cian text-size-40"></i></a></div>
+                            <div class="col-auto"><a href="https://twitter.com"><i class="fa-brands fa-square-twitter text-color-cian text-size-40"></i></a></div>
+                            <div class="col-auto"><a href="https://www.instagram.com"><i class="fa-brands fa-square-instagram text-color-cian text-size-40"></i></a></div>
+                        </div>
                     </div>
-
-
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6 col-12">
                     <form method="post">
                         {% csrf_token %}
                         {{ form.media }}
-                    <div class="row mx-0">
-                        {% for campo in form%}
-                            <div class="col-6 mx-0 px-0">
-                                {% bootstrap_field campo %}
+                            <div class="row mx-0">
+                                {% for campo in form %}
+                                    {% if campo.name == 'email' or campo.name == 'direccion'  %}
+                                        <div class="col-12 mx-0 px-0">
+                                            {% bootstrap_field campo placeholder=campo.label %}
+                                        </div>
+                                    {% elif campo.name == 'descripcion' %}
+                                        <div class="col-12 mx-0 px-0">
+                                            {% bootstrap_field campo placeholder=campo.label %}
+                                        </div>
+                                    {% else %}
+                                        <div class="col-6 mx-0 px-0">
+                                            {% bootstrap_field campo placeholder=campo.label %}
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
                             </div>
-                        {% endfor %}
-                    </div>
                         <button class="btn btn-primary" type="submit">Registrar</button>
                     </form>
                 </div>

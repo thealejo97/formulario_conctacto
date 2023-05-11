@@ -34,6 +34,8 @@ contiene medidas de seguridad separando los datos sensibles en el archivo secret
 7. python manage.py migrate
 8. 'python manage.py cities_light' - Crea las ciudades y paises en la base de datos
 9. En caso de error al crear las ciudades ejecuta 'python manage.py cities_light --force-all'
+10. Ejecutar el proyecto con: 'python manage.py runserver'
 
+## Información Extra
 
-
+1. Para obtener los usuarios registrados en formato JSON pueden consumir el api '/usuarios/api/list/'

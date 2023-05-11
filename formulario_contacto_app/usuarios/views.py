@@ -1,4 +1,4 @@
-from django.views.generic import CreateView, UpdateView, DetailView, TemplateView, ListView, FormView, DeleteView
+from django.views.generic import CreateView
 # Modulos internos de la app
 from .forms import UsuarioForm
 from .models import Usuario

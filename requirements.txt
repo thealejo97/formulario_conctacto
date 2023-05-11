@@ -4,4 +4,4 @@ django-environ==0.4.5
 django-cities-light
 django-bootstrap4
 django-bootstrap-datepicker-plus
-djangorestframework==3.11.0
+djangorestframework==3.14.0

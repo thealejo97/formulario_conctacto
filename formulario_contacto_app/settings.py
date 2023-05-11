@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'cities_light',
     'formulario_contacto_app.usuarios',
     'bootstrap_datepicker_plus',
+    'rest_framework',
     'bootstrap4'
 
 ]

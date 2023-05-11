@@ -1,6 +1,5 @@
 # Formulario contacto
 
-
 Aplicación en django desarrollada como prueba técnica
 
 ## Informacion de la aplicacion:
@@ -35,7 +34,13 @@ contiene medidas de seguridad separando los datos sensibles en el archivo secret
 8. 'python manage.py cities_light' - Crea las ciudades y paises en la base de datos
 9. En caso de error al crear las ciudades ejecuta 'python manage.py cities_light --force-all'
 10. Ejecutar el proyecto con: 'python manage.py runserver'
+11. Las rutas son:
+
+* http://localhost:8000/usuarios/registrar/
+* http://localhost:8000/usuarios/api/list/ [GET]
 
 ## Información Extra
 
 1. Para obtener los usuarios registrados en formato JSON pueden consumir el api '/usuarios/api/list/'
+2. Para registrar usuario se puede usar la view 'http://localhost:8000/usuarios/registrar/'
+3. En el directorio capturas se adjuntan fotos del aplicativo
